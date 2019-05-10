@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<BorderPane fx:controller="com.aydinnajafov.teqaud.UpdateSubject" fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="351.0" prefWidth="401.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <TableView fx:id="table" prefHeight="190.0" prefWidth="482.0" BorderPane.alignment="CENTER" onMouseClicked="#nameSetter">
+        <columns>
+          <TableColumn fx:id="name" minWidth="0.0" prefWidth="236.0" text="Fənnin adı">
+             <cellValueFactory>
+                <PropertyValueFactory property="subjectName"/>
+             </cellValueFactory>
+          </TableColumn>
+          <TableColumn fx:id="credit" prefWidth="46.0" text="Krediti">
+             <cellValueFactory>
+                <PropertyValueFactory property="subjectCredit"/>
+             </cellValueFactory>
+          </TableColumn>
+            <TableColumn fx:id="grade" prefWidth="118.0" text="Tələbənin aldığı bal">
+               <cellValueFactory>
+                  <PropertyValueFactory property="subjectGrade"/>
+               </cellValueFactory>
+            </TableColumn>
+        </columns>
+      </TableView>
+   </top>
+   <center>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="152.0" prefWidth="192.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="69.0" text="Fənnin adı">
+                     <VBox.margin>
+                        <Insets left="65.0" top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="51.0" text="Krediti">
+                     <VBox.margin>
+                        <Insets left="75.0" top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="45.0" text="Bal">
+                     <VBox.margin>
+                        <Insets left="75.0" top="15.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="161.0" prefWidth="218.0">
+               <children>
+                  <Label fx:id="nameLabel" alignment="CENTER" text="Label">
+                     <VBox.margin>
+                        <Insets left="75.0" top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="creditLabel" alignment="CENTER" text="Label">
+                     <VBox.margin>
+                        <Insets left="75.0" top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="gradeField" maxWidth="75.0" prefHeight="25.0" prefWidth="50.0">
+                     <VBox.margin>
+                        <Insets left="50.0" top="15.0" />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+   <bottom>
+      <Button fx:id="saveButton" mnemonicParsing="false" text="Yadda saxla" onAction="#saveButtonHandler" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="15.0" right="10.0" />
+         </BorderPane.margin>
+      </Button>
+   </bottom>
+</BorderPane>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<BorderPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="688.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aydinnajafov.teqaud.Controller">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Fayl">
+            <items>
+                  <MenuItem fx:id="addFile" onAction="#addGroupButton" mnemonicParsing="false" text="Əlavə et" />
+                  <MenuItem onAction="#groupStudents" mnemonicParsing="false" text="Qrupun tələbələri" />
+                  <MenuItem mnemonicParsing="false" onAction="#groupSubjects" text="Qrupun fənnləri" />
+                  <MenuItem fx:id="deleteFile" mnemonicParsing="false" text="Sil" onAction="#deleteGroup"/>
+                <MenuItem mnemonicParsing="false" onAction="#showResult" text="Nəticə" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Əlavə">
+              <items>
+                <MenuItem fx:id="guide" mnemonicParsing="false" onAction="#userGuide" text="İstifadəçi təlimatı" />
+                  <MenuItem fx:id="about" mnemonicParsing="false" onAction="#about" text="Haqqında" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="exit" mnemonicParsing="false" onAction="#exit" text="Çıxış" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <TableView fx:id="tableView" prefHeight="412.0" prefWidth="688.0" BorderPane.alignment="CENTER">
+          <columnResizePolicy>
+              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+          </columnResizePolicy>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                  <MenuItem onAction="#addGroupButton" mnemonicParsing="false" text="Əlavə et" />
+                  <MenuItem onAction="#groupStudents" mnemonicParsing="false" text="Qrupun tələbələri" />
+                  <MenuItem mnemonicParsing="false" onAction="#groupSubjects" text="Qrupun fənnləri" />
+                  <MenuItem mnemonicParsing="false" onAction="#showResult" text="Nəticə" />
+                  <MenuItem mnemonicParsing="false" text="Sil" onAction="#deleteGroup" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+         <columns>
+            <TableColumn fx:id="group" prefWidth="211.0" text="Qrup">
+                <cellValueFactory>
+                    <PropertyValueFactory property="groupNumber"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="facultyName" prefWidth="247.0" text="Fakultə">
+                <cellValueFactory>
+                    <PropertyValueFactory property="facultyName"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="studentSize" prefWidth="93.0" text="Tələbə sayı ">
+                <cellValueFactory>
+                    <PropertyValueFactory property="studentSize"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="subjectSize" prefWidth="75.0" text="Fənn sayı" >
+                <cellValueFactory>
+                    <PropertyValueFactory property="subjectSize"/>
+                </cellValueFactory>
+            </TableColumn>
+         </columns>
+      </TableView>
+   </center>
+   <bottom>
+      <HBox prefHeight="36.0" prefWidth="688.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="studentNumberLabel" text="Təqaüd alacaq tələbələrin sayını daxil edin">
+               <HBox.margin>
+                  <Insets left="5.0" top="8.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="studentNumberField" maxWidth="50.0">
+               <HBox.margin>
+                  <Insets left="30.0" top="5.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+</BorderPane>

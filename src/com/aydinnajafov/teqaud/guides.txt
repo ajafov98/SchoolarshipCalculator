@@ -1,0 +1,22 @@
+*Təqaüd siyahısının hazırlanması üçün hət bir qrup, onun fənnləri və tələbələri ayrı - ayrılıqda daxil edilməlidir.
+*"Fayl" menusu:
+*Yeni qrup əlavə etmək üçün "Əlavə et" bölməsinə daxil olun
+*Qrupun tələbələrini redaktə etmək üçün "Tələbələrin redaktəsi" bölməsinə daxil olun, buradan həm də balları daxil edə bilərsiz
+*Qrupun fənnlərini redaktə etmək üçün "Fənnlərin redaktəsi" bölməsinə daxil olun
+*Qrupu silmək üçün, onu seçib "Sil" düyməsini seçin
+*Nəticələri hesablamaq üçün ilk əvvəl ekranın aşağı hissəsində təqaüd alacaq tələbələrin sayın daxil edin daha sonra "Nəticə" düyməsini seçin
+*"Əlavə" menusu:
+*İstifadəçi təlimatları üçün "İstifadəçi təlimatı" bölməsinə daxil olun
+*Tərtibatçı və proqram haqqında məlumat üçün "Haqqında" bölməsinə daxil olun
+*Proqramdan çıxmaq üçün "Çıxış" düyməsini seçin
+*"Qrupun tələbləri" bölməsi:
+*Yeni tələbə əlavə etmək üçün "Yeni" düyməsini basıb adı daxil edib "Təsdiqlə" düyməsini seçin
+*Tələbələri redaktə etmək üçün istədiyiniz tələbəni seçib redaktə et düyməsini basın, redaktəni bitirdikdən sonra "Təsdiqlə" düyməsin seçin
+*Silmək istədiyiniz tələbəni seçərək "Sil" düyməsini seçin
+*Tələbələrin ballarını daxil etmək üçün alt menunu (adətən mausun sağ düyməsi) açaraq "Qiymətlərin əlavəsi" düyməsini seçin
+*"Qiymətlərin əlavəsi" bölməsi:
+*Fənnləri seçərək uyğun xanaya qiymətləri daxil edin
+*"Qrupun fənnləri" bölməsi:
+*Yeni fənn əlavə etmək üçün "Yeni" düyməsini basıb adı və krediti daxil edib "Təsdiqlə" düyməsini seçin
+*Fənnləri redaktə etmək üçün istədiyiniz fənni seçib redaktə et düyməsini basın, redaktəni bitirdikdən sonra "Təsdiqlə" düyməsin seçin
+*Silmək istədiyiniz fənni seçərək "Sil" düyməsini seçin

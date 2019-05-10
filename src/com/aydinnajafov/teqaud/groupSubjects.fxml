@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="393.0" prefWidth="672.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aydinnajafov.teqaud.GroupSubjects">
+    <children>
+        <TableView fx:id="table" prefHeight="324.0" prefWidth="672.0">
+            <columns>
+                <TableColumn fx:id="name" prefWidth="199.0" text="Fənnin adı">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="subjectName"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="credit" minWidth="0.0" prefWidth="91.0" text="Krediti">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="subjectCredit"/>
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+        <Button fx:id="delete" layoutX="241.0" layoutY="339.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" text="Sil" onAction="#deleteStudent" />
+        <Button fx:id="newSubject" onAction="#newSubjectButton" layoutX="32.0" layoutY="339.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" text="Yeni" />
+        <Button fx:id="edit" layoutX="121.0" layoutY="339.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="98.0" text="Redakte et" onAction="#editStudent" />
+        <TextField fx:id="newSubjectName" promptText="Fənnin adın daxil edin" layoutX="340.0" layoutY="339.0" prefHeight="25.0" prefWidth="200.0" visible="false" onKeyPressed="#keyHandler"/>
+        <TextField fx:id="newSubjectCredit" promptText="Fənnin kreditin daxil edin" layoutX="340.0" layoutY="369.0" prefHeight="25.0" prefWidth="200.0" visible="false" onKeyPressed="#keyHandler"/>
+        <Button fx:id="add" layoutX="572.0" layoutY="339.0" mnemonicParsing="false" text="Təsdiqlə" visible="false" onAction="#addButton" disable="true" />
+    </children>
+</AnchorPane>
